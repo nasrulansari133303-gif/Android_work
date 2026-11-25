@@ -1,0 +1,6 @@
+{
+  "name": "Kaam-Mitra",
+  "description": "Local service marketplace platform connecting customers, verified service workers, and administrators with real-time job matching.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/km_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/km_navy"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kaam-Mitra Admin Console"
+                    android:textColor="@color/white"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Real-time platform operations &amp; analytics"
+                    android:textColor="#CBD5E1"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@color/km_error_soft"
+                android:padding="12dp"
+                android:textColor="@color/km_error"
+                android:visibility="gone" />
+
+            <GridLayout
+                android:id="@+id/gridStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:padding="12dp"
+                android:useDefaultMargins="true">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    app:cardBackgroundColor="@color/km_surface"
+                    app:cardCornerRadius="14dp"
+                    app:strokeColor="@color/km_border"
+                    app:strokeWidth="1dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Customers" android:textColor="@color/km_text_secondary" android:textSize="12sp" />
+                        <TextView android:id="@+id/tvTotalCustomers" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/km_navy" android:textSize="22sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    app:cardBackgroundColor="@color/km_surface"
+                    app:cardCornerRadius="14dp"
+                    app:strokeColor="@color/km_border"
+                    app:strokeWidth="1dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Workers" android:textColor="@color/km_text_secondary" android:textSize="12sp" />
+                        <TextView android:id="@+id/tvTotalWorkers" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/km_navy" android:textSize="22sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    app:cardBackgroundColor="@color/km_teal_soft"
+                    app:cardCornerRadius="14dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Verified Workers" android:textColor="@color/km_teal" android:textSize="12sp" />
+                        <TextView android:id="@+id/tvVerifiedWorkers" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/km_navy" android:textSize="22sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    app:cardBackgroundColor="@color/km_warning_soft"
+                    app:cardCornerRadius="14dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pending Workers" android:textColor="@color/km_warning" android:textSize="12sp" />
+                        <TextView android:id="@+id/tvPendingWorkers" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/km_navy" android:textSize="22sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    app:cardBackgroundColor="@color/km_saffron_soft"
+                    app:cardCornerRadius="14dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Active Jobs" android:textColor="@color/km_saffron_dark" android:textSize="12sp" />
+                        <TextView android:id="@+id/tvActiveJobs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/km_navy" android:textSize="22sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    app:cardBackgroundColor="@color/km_surface"
+                    app:cardCornerRadius="14dp"
+                    app:strokeColor="@color/km_border"
+                    app:strokeWidth="1dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Completed Jobs" android:textColor="@color/km_text_secondary" android:textSize="12sp" />
+                        <TextView android:id="@+id/tvCompletedJobs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/km_teal" android:textSize="22sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    app:cardBackgroundColor="@color/km_surface"
+                    app:cardCornerRadius="14dp"
+                    app:strokeColor="@color/km_border"
+                    app:strokeWidth="1dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancelled Jobs" android:textColor="@color/km_text_secondary" android:textSize="12sp" />
+                        <TextView android:id="@+id/tvCancelledJobs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/km_error" android:textSize="22sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    app:cardBackgroundColor="@color/km_surface"
+                    app:cardCornerRadius="14dp"
+                    app:strokeColor="@color/km_border"
+                    app:strokeWidth="1dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Today's Revenue" android:textColor="@color/km_text_secondary" android:textSize="12sp" />
+                        <TextView android:id="@+id/tvTodaysRevenue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="₹0" android:textColor="@color/km_navy" android:textSize="20sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </GridLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                app:cardBackgroundColor="@color/km_navy"
+                app:cardCornerRadius="14dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Platform Commission Earned" android:textColor="#CBD5E1" android:textSize="13sp" />
+                    <TextView android:id="@+id/tvPlatformCommission" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="₹0" android:textColor="#5EEAD4" android:textSize="24sp" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

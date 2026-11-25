@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_worker"
+    app:startDestination="@id/workerHomeFragment">
+
+    <fragment
+        android:id="@+id/workerHomeFragment"
+        android:name="com.example.worker.WorkerHomeFragment"
+        android:label="Worker Home">
+        <action
+            android:id="@+id/action_workerHome_to_activeJob"
+            app:destination="@id/workerActiveJobFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/workerJobsFragment"
+        android:name="com.example.worker.WorkerJobsFragment"
+        android:label="My Jobs">
+        <action
+            android:id="@+id/action_workerJobs_to_activeJob"
+            app:destination="@id/workerActiveJobFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/workerActiveJobFragment"
+        android:name="com.example.worker.WorkerActiveJobFragment"
+        android:label="Active Job" />
+
+    <fragment
+        android:id="@+id/workerEarningsFragment"
+        android:name="com.example.worker.WorkerEarningsFragment"
+        android:label="Earnings" />
+
+    <fragment
+        android:id="@+id/workerProfileFragment"
+        android:name="com.example.worker.WorkerProfileFragment"
+        android:label="Profile" />
+</navigation>

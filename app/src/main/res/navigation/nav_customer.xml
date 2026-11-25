@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_customer"
+    app:startDestination="@id/customerHomeFragment">
+
+    <fragment
+        android:id="@+id/customerHomeFragment"
+        android:name="com.example.customer.CustomerHomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_home_to_createJob"
+            app:destination="@id/createJobFragment" />
+        <action
+            android:id="@+id/action_home_to_jobDetail"
+            app:destination="@id/customerJobDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createJobFragment"
+        android:name="com.example.customer.CreateJobFragment"
+        android:label="Create Job">
+        <action
+            android:id="@+id/action_createJob_to_mapPicker"
+            app:destination="@id/mapPickerFragment" />
+        <action
+            android:id="@+id/action_createJob_to_jobDetail"
+            app:destination="@id/customerJobDetailFragment"
+            app:popUpTo="@id/customerHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mapPickerFragment"
+        android:name="com.example.customer.MapPickerFragment"
+        android:label="Select Location" />
+
+    <fragment
+        android:id="@+id/customerJobsFragment"
+        android:name="com.example.customer.CustomerJobsFragment"
+        android:label="My Jobs">
+        <action
+            android:id="@+id/action_jobs_to_jobDetail"
+            app:destination="@id/customerJobDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/customerJobDetailFragment"
+        android:name="com.example.customer.CustomerJobDetailFragment"
+        android:label="Job Details" />
+
+    <fragment
+        android:id="@+id/customerPaymentsFragment"
+        android:name="com.example.customer.CustomerPaymentsFragment"
+        android:label="My Payments" />
+
+    <fragment
+        android:id="@+id/customerProfileFragment"
+        android:name="com.example.customer.CustomerProfileFragment"
+        android:label="My Profile" />
+</navigation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.KaamMitra" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/km_saffron</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/km_saffron_soft</item>
+        <item name="colorOnPrimaryContainer">@color/km_saffron_dark</item>
+        <item name="colorSecondary">@color/km_teal</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/km_teal_soft</item>
+        <item name="colorOnSecondaryContainer">@color/km_navy</item>
+        <item name="android:colorBackground">@color/km_bg</item>
+        <item name="colorSurface">@color/km_surface</item>
+        <item name="colorOnSurface">@color/km_text_primary</item>
+        <item name="colorSurfaceVariant">@color/km_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/km_text_secondary</item>
+        <item name="colorOutline">@color/km_border</item>
+        <item name="colorError">@color/km_error</item>
+        <item name="android:statusBarColor">@color/km_navy</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Theme.MyApplication" parent="Theme.KaamMitra" />
+</resources>
